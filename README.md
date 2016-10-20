@@ -57,12 +57,17 @@ Returns **Object**, example:
 ```
 
 
-## Deploy detective contracts
+## Deployment
   1. Make sure you have an `account.json` file outside this repo, that contains one JSON object with two properties `address` and `privateKey`, like so: `{"address": "0x000...", "privateKey": "000..."}`.
   2. Run `npm run deploy`
 
 ```
 npm run deploy
+```
+
+## Tests
+```
+npm run test
 ```
 
 ## LICENCE
