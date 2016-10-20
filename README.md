@@ -45,17 +45,15 @@ Detects the current network of a web3 provider.
 
 -   `web3Provider` **Object** the web3 provider you would like to check the nextwork (i.e. 'livenet' or 'testnet') of.
 
-Returns **Object**
+Returns **Object**, example:
 
 ```
-/*
-example Object result:
 {
   network: 'livenet',
   isLivenet: true,
   isTestnet: false,
+  isCustom: false,
 }
-*/
 ```
 
 
