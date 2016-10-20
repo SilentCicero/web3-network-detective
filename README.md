@@ -67,7 +67,7 @@ npm run deploy
 
 ## Tests
 ```
-npm run test
+npm test
 ```
 
 ## LICENCE
