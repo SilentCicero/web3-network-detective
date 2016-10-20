@@ -58,8 +58,8 @@ Returns **Object**, example:
 
 
 ## Deploy detective contracts
- 1) Make sure you have an `account.json` file outside this repo, that contains one JSON object with two properties: `{"address": "0x000...", "privateKey": "000..."}`.
- 2) Run `npm run deploy`
+  1. Make sure you have an `account.json` file outside this repo, that contains one JSON object with two properties: `{"address": "0x000...", "privateKey": "000..."}`.
+  2. Run `npm run deploy`
 
 ```
 npm run deploy
