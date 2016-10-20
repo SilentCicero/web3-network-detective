@@ -16,7 +16,7 @@ const web3 = new Web3(new Web3.providers.HttpProvider('https://morden.infura.io/
 
 // network detective usage
 networkDetective(web3.currentProvider, function(detectiveError, detectiveResult){
-  if (!error) {
+  if (!detectiveError) {
     console.log(detectiveResult);
   }
 });
