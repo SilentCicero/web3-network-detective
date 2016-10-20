@@ -1,12 +1,12 @@
-# web3-network-detective
+## web3-network-detective
 A simple module to determine if your web3 provider is on the Ethereum mainnet, (morden) testnet or a custom network.
 
-# Install
+## Install
 ```
 npm install --save web3-network-detective
 ```
 
-# Usage
+## Usage
 ```js
 import Web3 from 'web3';
 import networkDetective from 'web3-network-detective';
@@ -33,9 +33,9 @@ example detective result:
 
 ```
 
-# API Design
+## API Design
 
-## constructor
+### constructor
 
 [index.js:289-308](https://github.com/ethereum/ethereumjs-block/blob/16fb366efed89b87591c971e86a3bbdc842a13b1/index.js#L289-L308 "Source code on GitHub")
 
@@ -59,7 +59,7 @@ example Object result:
 ```
 
 
-# Deploy detective contracts
+## Deploy detective contracts
  1) Make sure you have an `account.json` file outside this repo, that contains one JSON object with two properties: `{"address": "0x000...", "privateKey": "000..."}`.
  2) Run `npm run deploy`
 
@@ -67,5 +67,5 @@ example Object result:
 npm run deploy
 ```
 
-# LICENCE
+## LICENCE
 MIT - Yeee boy.
