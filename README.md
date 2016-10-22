@@ -1,5 +1,10 @@
 ## web3-network-detective
+
+[![NPM version](http://img.shields.io/npm/v/web3-network-detective.svg)](https://www.npmjs.org/package/web3-network-detective) [![Build status](https://ci.appveyor.com/api/projects/status/wwajr0886e00g8je/branch/master?svg=true)](https://ci.appveyor.com/project/weifund/web3-network-detective/branch/master) [![Coverage Status](https://coveralls.io/repos/github/weifund/web3-network-detective/badge.svg?branch=master)](https://coveralls.io/github/weifund/web3-network-detective?branch=master) [![NPM Downloads](https://img.shields.io/npm/dm/web3-network-detective.svg)](https://www.npmjs.org/package/web3-network-detective)
+
 A simple module to determine if your web3 provider is on the Ethereum mainnet, (morden) testnet or a custom network.
+
+This module is still in development.. and is not published yet.
 
 ## Install
 ```

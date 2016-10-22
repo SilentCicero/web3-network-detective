@@ -1,0 +1,119 @@
+{
+  "name": "web3-network-detective",
+  "version": "0.0.1",
+  "description": "A simple module for determining if a web3 provider is on the livenet or testnet.",
+  "scripts": {
+    "start": "node ./scripts/setuprepository.js",
+    "npmcheckversion": "node ./scripts/npmcheckversion.js",
+    "preinstall": "npm run npmcheckversion",
+    "test": "npm run test:dapple && mocha src/tests/**/*.js && mocha src/contracts/tests/**/*.js",
+    "test:dapple": "cd ./src/contracts/ && node ../../node_modules/dapple/cmd/main.js test",
+    "prebuild": "npm run test && rimraf dist && mkdir dist",
+    "build:dapple": "node ./node_modules/dapple/cmd/main.js build",
+    "build": "browserify src/index.js -o dist/bundle.js",
+    "ethdeploy:testnet": "node ./node_modules/ethdeploy/bin/main.js ./scripts/ethdeploy.testnet.js",
+    "ethdeploy:mainnet": "node ./node_modules/ethdeploy/bin/main.js ./scripts/ethdeploy.mainnet.js",
+    "prepublish": "npm run build",
+    "release": "npmpub",
+    "pretest": "npm run lint",
+    "lint": "npm run lint:js",
+    "lint:eslint": "eslint --ignore-path .gitignore",
+    "lint:js": "npm run lint:eslint -- .",
+    "lint:staged": "lint-staged",
+    "coveralls": "cat ./coverage/lcov/lcov.info | coveralls"
+  },
+  "authors": [
+    "Nick Dodson <nick.dodson@consensys.net>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/silentcicero/web3-network-detective.git"
+  },
+  "main": "src/index.js",
+  "files": [
+    "CONTRIBUTING.md",
+    "scripts",
+    "dist",
+    "src",
+    "docs",
+    "!**/__tests__"
+  ],
+  "keywords": [
+    "default",
+    "weifund"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "web3": "^0.17.0-beta"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "chai": "^3.5.0",
+    "chaithereum": "^1.4.0",
+    "cli-input": "^0.2.0",
+    "coveralls": "^2.11.9",
+    "cross-env": "^1.0.7",
+    "dapple": "^0.8.11",
+    "es6-arrow-function": "^0.6.6",
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^1.5.5",
+    "eslint-plugin-react": "^5.2.2",
+    "esprima": "^2.7.3",
+    "ethdeploy": "git+https://github.com/SilentCicero/ethdeploy.git",
+    "ethdeploy-provider-zero-client": "git+https://github.com/SilentCicero/ethdeploy-provider-zero-client.git",
+    "ethereumjs-tx": "^1.1.2",
+    "ethereumjs-util": "^4.5.0",
+    "eventsource-polyfill": "^0.9.6",
+    "lint-staged": "^1.0.1",
+    "lodash": "^4.13.1",
+    "minimist": "^1.2.0",
+    "mocha": "^2.4.5",
+    "pre-commit": "^1.1.3",
+    "replace-in-file": "^2.0.1",
+    "rimraf": "^2.5.2",
+    "sinon": "^2.0.0-pre"
+  },
+  "lint-staged": {
+    "lint:eslint": "*.js"
+  },
+  "eslintConfig": {
+    "parser": "esprima",
+    "extends": "airbnb",
+    "env": {
+      "browser": true,
+      "mocha": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "rules": {
+      "import/no-unresolved": 2,
+      "comma-dangle": [
+        2,
+        "always-multiline"
+      ],
+      "indent": [
+        2,
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "no-var": 0,
+      "func-names": 0,
+      "prefer-arrow-callback": 0,
+      "arrow-spacing": 0,
+      "requireArrowFunctions": 0,
+      "no-console": 1,
+      "max-len": 0,
+      "prefer-template": 2,
+      "no-use-before-define": 0,
+      "newline-per-chained-call": 0
+    }
+  },
+  "pre-commit": "lint:staged"
+}
