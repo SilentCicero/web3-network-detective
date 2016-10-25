@@ -12,6 +12,24 @@ const baseCallbackResult = {
   custom: false,
 };
 
+// testnet result
+const testnetObjectResult = Object.assign({}, baseCallbackResult, {
+  testnet: true,
+  network: 'testnet',
+});
+
+// testnet result
+const mainnetObjectResult = Object.assign({}, baseCallbackResult, {
+  mainnet: true,
+  network: 'mainnet',
+});
+
+// custom result
+const customObjectResult = Object.assign({}, baseCallbackResult, {
+  custom: true,
+  network: 'custom',
+});
+
 // default module export
 function networkDetective(web3Provider, callback) {
   // set the current provider
@@ -34,36 +52,18 @@ function networkDetective(web3Provider, callback) {
 
     // check if testnet
     if (testnetResult === true) {
-      // testnet result
-      const testnetObjectResult = Object.assign(baseCallbackResult, {
-        testnet: true,
-        network: 'testnet',
-      });
-
       callback(null, testnetObjectResult);
     } else {
       // testnet spy first
-      mainnetNetworkSpy.testnet((mainnetError, mainnetResult) => {
+      mainnetNetworkSpy.mainnet((mainnetError, mainnetResult) => {
         if (mainnetError) {
           return callback(mainnetError, null);
         }
-
-        // testnet result
-        const mainnetObjectResult = Object.assign(baseCallbackResult, {
-          mainnet: true,
-          network: 'mainnet',
-        });
 
         // check if mainnet or just custom
         if (mainnetResult === true) {
           callback(null, mainnetObjectResult);
         } else {
-          // custom result
-          const customObjectResult = Object.assign(baseCallbackResult, {
-            custom: true,
-            network: 'custom',
-          });
-
           callback(null, customObjectResult);
         }
 
