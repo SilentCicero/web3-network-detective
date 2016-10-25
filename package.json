@@ -1,12 +1,12 @@
 {
   "name": "web3-network-detective",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A simple module for determining if a web3 provider is on the livenet or testnet.",
   "scripts": {
     "start": "node ./scripts/setuprepository.js",
     "npmcheckversion": "node ./scripts/npmcheckversion.js",
     "preinstall": "npm run npmcheckversion",
-    "test": "npm run test:dapple && mocha src/tests/**/*.js -R spec && mocha src/contracts/tests/**/*.js -R spec",
+    "test": "npm run test:dapple && mocha src/tests/**/*.js -t 100000 -R spec && mocha src/contracts/tests/**/*.js -t 100000 -R spec",
     "test:dapple": "cd ./src/ && node ../node_modules/dapple/cmd/main.js test",
     "prebuild": "npm run test && rimraf dist && mkdir dist",
     "build:dapple": "node ./node_modules/dapple/cmd/main.js build",

@@ -4,8 +4,6 @@
 
 A simple module to determine if your web3 provider is on the Ethereum mainnet, (morden) testnet or a custom network.
 
-This module is still in development.. and is not published yet.
-
 ## Install
 ```
 npm install --save web3-network-detective
