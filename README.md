@@ -27,8 +27,8 @@ networkDetective(web3.currentProvider, function(detectiveError, detectiveResult)
 /*
 example detective result:
 {
-  network: 'livenet', // or 'testnet' or 'custom'
-  livenet: true,
+  network: 'mainnet', // or 'testnet' or 'custom'
+  mainnet: true,
   testnet: false,
   custom: false,
 }
@@ -52,8 +52,8 @@ Returns **Object**, example:
 
 ```
 {
-  network: 'livenet', // or 'testnet' or 'custom'
-  livenet: true,
+  network: 'mainnet', // or 'testnet' or 'custom'
+  mainnet: true,
   testnet: false,
   custom: false,
 }

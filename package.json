@@ -1,7 +1,7 @@
 {
   "name": "web3-network-detective",
   "version": "0.1.0",
-  "description": "A simple module for determining if a web3 provider is on the livenet or testnet.",
+  "description": "A simple module for determining if a web3 provider is on the Ethereum mainnet or testnet.",
   "scripts": {
     "start": "node ./scripts/setuprepository.js",
     "npmcheckversion": "node ./scripts/npmcheckversion.js",
@@ -39,8 +39,13 @@
     "!**/__tests__"
   ],
   "keywords": [
-    "default",
-    "weifund"
+    "web3",
+    "network",
+    "detection",
+    "detector",
+    "identifier",
+    "testnet",
+    "mainnet"
   ],
   "license": "MIT",
   "dependencies": {
