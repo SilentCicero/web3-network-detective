@@ -5,10 +5,11 @@ const ethdeployBase = require('./ethdeploy.base.js');
 module.exports = Object.assign(ethdeployBase, {
   output: {
     environment: 'mainnet',
+    path: ethdeployBase.output.path,
   },
   module: function(deploy, contracts, environment){
     deploy(contracts.NetworkSpy, 0).then(function(networkSpyInstance){
-      environment.log('Network Testnet Spy Deployed!');
+      environment.log('Network Mainnet Spy Deployed!');
     });
   },
 });

@@ -22,6 +22,10 @@ const zeroClientProvider = function(host, port) {
       const tx = new Tx(rawTx);
       tx.sign(privateKey);
 
+      console.log(rawTx, ethUtil.bufferToHex(tx.serialize()));
+
+      return;
+
       // callback with buffered serilized signed tx
       cb(null, ethUtil.bufferToHex(tx.serialize()));
     },
@@ -32,8 +36,7 @@ const zeroClientProvider = function(host, port) {
 
 module.exports = {
   output: {
-    environment: 'all',
-    path: '../src/contracts/build/environments.json',
+    path: './src/contracts/build/environments.json',
   },
   entry: {
     testnet: contracts,
@@ -41,15 +44,13 @@ module.exports = {
   },
   config: {
     'defaultAccount': 0,
-    'defaultGas': 1990020,
+    'defaultGas': 2183728,
     'environments': {
       'testnet': {
         'provider': zeroClientProvider('https://morden.infura.io', 8545),
-        'objects': {},
       },
       'mainnet': {
         'provider': zeroClientProvider('https://mainnet.infura.io', 8545),
-        'objects': {},
       },
     },
   },

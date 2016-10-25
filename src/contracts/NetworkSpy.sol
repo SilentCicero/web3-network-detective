@@ -1,5 +1,3 @@
-pragma solidity ^0.4.2;
-
 contract NetworkSpy {
   function NetworkSpy(bool _testnet) {
     // if testnet

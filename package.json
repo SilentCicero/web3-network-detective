@@ -6,8 +6,8 @@
     "start": "node ./scripts/setuprepository.js",
     "npmcheckversion": "node ./scripts/npmcheckversion.js",
     "preinstall": "npm run npmcheckversion",
-    "test": "npm run test:dapple && mocha src/tests/**/*.js && mocha src/contracts/tests/**/*.js",
-    "test:dapple": "cd ./src/contracts/ && node ../../node_modules/dapple/cmd/main.js test",
+    "test": "npm run test:dapple && mocha src/tests/**/*.js -R spec && mocha src/contracts/tests/**/*.js -R spec",
+    "test:dapple": "cd ./src/ && node ../node_modules/dapple/cmd/main.js test",
     "prebuild": "npm run test && rimraf dist && mkdir dist",
     "build:dapple": "node ./node_modules/dapple/cmd/main.js build",
     "build": "browserify src/index.js -o dist/bundle.js",
@@ -44,6 +44,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "dapple": "^0.7.2",
     "web3": "^0.17.0-beta"
   },
   "devDependencies": {
@@ -53,7 +54,7 @@
     "cli-input": "^0.2.0",
     "coveralls": "^2.11.9",
     "cross-env": "^1.0.7",
-    "dapple": "^0.8.11",
+    "dapple": "^0.7.2",
     "es6-arrow-function": "^0.6.6",
     "eslint": "^2.13.1",
     "eslint-config-airbnb": "^9.0.1",

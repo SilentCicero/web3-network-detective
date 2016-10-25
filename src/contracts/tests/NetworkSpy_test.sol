@@ -1,5 +1,3 @@
-pragma solidity ^0.4.2;
-
 import "dapple/test.sol";
 import "NetworkSpy.sol";
 
