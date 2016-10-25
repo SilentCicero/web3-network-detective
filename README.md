@@ -42,7 +42,7 @@ example detective result:
 
 ### constructor
 
-[index.js:289-308](https://github.com/ethereum/ethereumjs-block/blob/16fb366efed89b87591c971e86a3bbdc842a13b1/index.js#L289-L308 "Source code on GitHub")
+[index.js:34-78](https://github.com/SilentCicero/web3-network-detective/blob/master/src/index.js#L34-L78 "Source code on GitHub")
 
 Detects the current network of a web3 provider.
 
