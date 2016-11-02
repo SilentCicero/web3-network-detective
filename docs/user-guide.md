@@ -2,6 +2,11 @@
 
 All information for developers using web3-network-detective should consult this document.
 
+## Install
+```
+npm install --save web3-network-detective
+```
+
 # To use `web3-network-detective`
 
 1. require the module

@@ -77,4 +77,4 @@ npm test
 ```
 
 ## LICENCE
-MIT -- [LICENCE](../../../LICENSE)
+MIT -- [LICENCE](../../blob/master/LICENSE)
