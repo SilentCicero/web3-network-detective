@@ -1,6 +1,6 @@
 {
   "name": "web3-network-detective",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A simple module for determining if a web3 provider is on the Ethereum mainnet or testnet.",
   "scripts": {
     "start": "node ./scripts/setuprepository.js",
@@ -49,10 +49,10 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "dapple": "^0.7.2",
     "web3": "^0.17.0-beta"
   },
   "devDependencies": {
+    "dapple": "^0.7.2",
     "browserify": "^13.1.0",
     "chai": "^3.5.0",
     "chaithereum": "^1.4.0",

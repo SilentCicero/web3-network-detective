@@ -1,3 +1,8 @@
+# 1.0.0 -- Version 1
+1. Unit tests
+2. Docs
+3. Detect if web3 standard provider object is on Testnet, Mainnet, Custom
+
 # 0.0.1 -- Scaffolding
 
 1. Code of Conduct established

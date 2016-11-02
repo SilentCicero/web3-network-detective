@@ -8,7 +8,7 @@ Following these guidelines helps to communicate that you respect the time of the
 
 ## Using the issue tracker
 
-The [issue tracker](https://github.com/weifund/default/issues) is
+The [issue tracker](https://github.com/SilentCicero/web3-network-detective/issues) is
 the preferred channel for [bug reports](#bugs), [features requests](#features)
 and [submitting pull requests](#pull-requests).
 
@@ -80,7 +80,7 @@ included in the project:
    # Navigate to the newly cloned directory
    cd default
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/weifund/default.git
+   git remote add upstream https://github.com/SilentCicero/web3-network-detective.git
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:
